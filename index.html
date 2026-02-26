@@ -35,7 +35,10 @@ img{
         <form action="">
 
             <label for="card-name" required>Cardholder Name<span aria-hidden="true">*</span></label>
-            <input type="text" id="card-name" name="card-name">
+            <input 
+                type="text" 
+                id="card-name" 
+                name="card-name">
 
             <label for="card-number">Card Number<span aria-hidden="true">*</span></label>
             <input 
@@ -51,15 +54,27 @@ img{
             <p id="card-number-help" aria-describedby="card-number">Please enter your 16-digit card number without spaces or dashes.</p>
 
             <label for="exp-date" required>Expire Date<span aria-hidden="true">*</span></label>
-            <input type="number" id="exp-date" name="exp-date">
+            <input 
+                type="number" 
+                id="exp-date" 
+                name="exp-date">
 
             <label for="cvv" required>CVV<span aria-hidden="true">*</span></label>
-            <input type="text" id="cvv" name="cvv">
+            <input 
+                type="text" 
+                id="cvv" 
+                name="cvv"
+                inputmode="numeric"
+                maxlength="4"
+                pattern="[0-9]{3,4}" 
+                aria-label="CVV security code">
+                
+                <button type="button">Place Order</button>
 
-            <button type="button">Place Order</button>
-
-        </form>
-
+                <!-- input for card number and CVV is text by type, and inputmode is numeric, to avoid deleting zeros if type were number -->
+                
+            </form>
+            
     </section>
     
 </body>
