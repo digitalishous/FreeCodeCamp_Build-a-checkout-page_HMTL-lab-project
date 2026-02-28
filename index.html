@@ -4,21 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<style>
-body{
-    text-align: center;
-}
-
-img{
-    width: 80vw;
-    height: 65vh;
-    margin: 0 auto;
-    display: block;
-}
-
-</style>
 <body>
 
     <h1>Checkout</h1>
@@ -26,10 +18,12 @@ img{
     <section>
         <h2>Your Cart</h2>
 
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F66%2Fa4%2F3c%2F66a43ccff280871dadfc75a1bb1e7140.jpg&f=1&nofb=1&ipt=082ad3007a7cca41286c938c7e07ea58da3d417c989a505b62d372345954a0bf" alt="">
+        <img src="assets/img/mindjuse_transparent.svg" alt="earrings">
+
     </section>
 
-    <section>
+    <section class="formSection">
+
         <h2>Payment Information</h2>
 
         <form action="">
@@ -49,6 +43,7 @@ img{
                 pattern="[0-9]" 
                 inputmode="numeric"
                 autocomplete="cc-number"
+                aria-describedby="card-number-help"
                 aria-label="Credit Card Number">
 
             <p id="card-number-help" aria-describedby="card-number">Please enter your 16-digit card number without spaces or dashes.</p>
@@ -69,7 +64,7 @@ img{
                 pattern="[0-9]{3,4}" 
                 aria-label="CVV security code">
                 
-                <button type="button">Place Order</button>
+                <button type="submit">Place Order</button>
 
                 <!-- input for card number and CVV is text by type, and inputmode is numeric, to avoid deleting zeros if type were number -->
                 

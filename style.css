@@ -1,0 +1,173 @@
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}   
+body{
+    text-align: center;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: #215c58;
+    background-color: #f4f9f9;
+    font-family: "Cutive Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+h1, h2{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+
+img{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border: none;
+    border-radius: 18px;
+    border: 1px solid;
+}
+
+section{
+    background: white;
+    padding: 2.5rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+section:first-of-type{
+    max-width: 420px;
+    margin: 1rem auto;
+    margin-top: 1rem;
+    }
+
+.formSection{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 420px;
+    margin: 1rem auto;
+    
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    border: 1px solid #215c58;
+    border-radius: 20px;
+    padding: 1rem 0;
+    color: #215c58;
+    box-shadow: 0 10px 20px rgba(33, 92, 88, 0.2);
+    
+    justify-items: center;
+    align-items: center;
+    background-color: #9fd6d27a;
+    width: 100%;
+    
+}
+
+p{
+    font-size: smaller;
+    color: #FF6F61;
+    font-weight: 400;
+    max-width: 90%;
+    position: relative;
+    top: -1rem; /* it was too far away from the input without this */
+    text-align: center;
+}
+
+button{
+    background-color: #215c58;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 14px;
+    color: white;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(33, 92, 88, 0.2);
+}
+
+input{
+    border: 1px solid #215c58;
+    border-radius: 14px;
+    width: 90%;
+    padding: 0.5rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #215c58;
+    box-shadow: 0 0 0 3px rgba(33, 92, 88, 0.10);
+}
+
+label, p{
+    font-weight: 600;
+}
+
+span{
+    color: #FF6F61;
+}
+
+@media (min-width: 900px){
+    body{
+        display: grid;
+        grid-template-columns: 420px 420px;
+        grid-template-rows: auto 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 6rem;
+        padding: 3rem 2rem;
+        text-align: left;
+    }
+
+    h1{
+        grid-column: 1/-1;
+        text-align: center;
+        margin-bottom: -2rem;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    section:first-of-type{
+        grid-column: 1;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .formSection{
+        grid-column: 2;
+        align-items: center;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        max-width: 420px;
+    }
+
+    section{
+        padding: 1rem;
+        border-radius: 20px;
+        align-self: center;
+    }
+}
+
+/*  #9FD6D2 svetlo plava
+    #FFD166 zuta
+    #FF6F61 roze*/
